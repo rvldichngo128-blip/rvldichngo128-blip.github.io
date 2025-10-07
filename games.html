@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Tebak-Tebakan</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin: auto;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 80%;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Game Tebak-Tebakan 🎉</h1>
+    <p id="question">Apa yang bisa terbang tapi bukan burung?</p>
+    <input type="text" id="answer" placeholder="Tulis jawabanmu di sini...">
+    <button onclick="checkAnswer()">Cek Jawaban</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    const correctAnswer = "pesawat";
+
+    function checkAnswer() {
+      const userAnswer = document.getElementById("answer").value.toLowerCase().trim();
+      const result = document.getElementById("result");
+
+      if (userAnswer === correctAnswer) {
+        result.textContent = "Benar! Kamu pintar 😄";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Salah! Coba lagi 😅";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

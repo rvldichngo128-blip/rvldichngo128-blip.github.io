@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Zona Game Seru</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #333;
+    }
+    .game-section {
+      background-color: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button, select {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    .result {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎮 Zona Game Seru 🎮</h1>
+
+  <!-- Game 1: Tebak-Tebakan -->
+  <div class="game-section">
+    <h2>1. Tebak-Tebakan</h2>
+    <p id="tebak-question">Apa yang bisa terbang tapi bukan burung?</p>
+    <input type="text" id="tebak-answer" placeholder="Jawabanmu...">
+    <button onclick="cekTebakan()">Cek Jawaban</button>
+    <div class="result" id="tebak-result"></div>
+  </div>
+
+  <!-- Game 2: Kalkulator Cepat -->
+  <div class="game-section">
+    <h2>2. Kalkulator Cepat</h2>
+    <input type="number" id="num1" placeholder="Angka 1">
+    <input type="number" id="num2" placeholder="Angka 2">
+    <button onclick="hitung()">Jumlahkan</button>
+    <div class="result" id="calc-result"></div>
+  </div>
+
+  <!-- Game 3: Pilih Warna Favorit -->
+  <div class="game-section">
+    <h2>3. Pilih Warna Favorit</h2>
+    <select id="color-picker" onchange="ubahWarna()">
+      <option value="">-- Pilih Warna --</option>
+      <option value="red">Merah</option>
+      <option value="blue">Biru</option>
+      <option value="green">Hijau</option>
+      <option value="yellow">Kuning</option>
+    </select>
+    <div class="result" id="color-result"></div>
+  </div>
+
+  <!-- Game 4: Lempar Dadu -->
+  <div class="game-section">
+    <h2>4. Lempar Dadu 🎲</h2>
+    <button onclick="lemparDadu()">Lempar!</button>
+    <div class="result" id="dadu-result"></div>
+  </div>
+
+  <script>
+    // Game 1
+    function cekTebakan() {
+      const jawaban = document.getElementById("tebak-answer").value.toLowerCase().trim();
+      const benar = "pesawat";
+      const hasil = document.getElementById("tebak-result");
+      hasil.textContent = jawaban === benar ? "Benar! Kamu jenius 😎" : "Salah! Jawabannya: " + benar;
+    }
+
+    // Game 2
+    function hitung() {
+      const a = parseFloat(document.getElementById("num1").value);
+      const b = parseFloat(document.getElementById("num2").value);
+      const hasil = document.getElementById("calc-result");
+      if (!isNaN(a) && !isNaN(b)) {
+        hasil.textContent = "Hasil: " + (a + b);
+      } else {
+        hasil.textContent = "Masukkan dua angka dulu!";
+      }
+    }
+
+    // Game 3
+    function ubahWarna() {
+      const warna = document.getElementById("color-picker").value;
+      const hasil = document.getElementById("color-result");
+      if (warna) {
+        hasil

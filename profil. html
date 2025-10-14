@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMK Malahayati</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #0066cc, #00cc99);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .highlight {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    footer {
+      background: #0066cc;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    a {
+      color: #00cc99;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SMK Malahayati</h1>
+    <p>Menyiapkan generasi unggul, kreatif, dan siap kerja</p>
+  </header>
+
+  <section>
+    <div class="highlight">
+      <h2>Tentang Kami</h2>
+      <p>SMK Malahayati adalah sekolah kejuruan yang berfokus pada pengembangan keterampilan siswa di bidang teknologi, bisnis, dan kreatif. Kami berkomitmen mencetak lulusan yang kompeten dan berdaya saing tinggi.</p>
+    </div>
+
+    <div class="highlight">
+      <h2>Program Keahlian</h2>
+      <ul>
+        <li>Teknik Komputer dan Jaringan</li>
+        <li>Akuntansi dan Keuangan</li>
+        <li>Desain Komunikasi Visual</li>
+        <li>Multimedia</li>
+      </ul>
+    </div>
+
+    <div class="highlight">
+      <h2>Fasilitas</h2>
+      <p>Kami menyediakan fasilitas modern seperti laboratorium komputer, studio multimedia, perpustakaan digital, dan ruang kelas interaktif untuk mendukung proses belajar yang menyenangkan.</p>
+    </div>
+
+    <div class="highlight">
+      <h2>Kontak</h2>
+      <p>Alamat: Jl. Pendidikan No. 123, Jakarta</p>
+      <p>Email: info@smkmalahayati.sch.id</p>
+      <p>Telp: (021) 12345678</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SMK Malahayati. Semua hak dilindungi.
+  </footer>
+
+</body>
+</html>
